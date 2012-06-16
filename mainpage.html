@@ -57,7 +57,7 @@ $(document).ready(function(){
 
         // Redirect to a vegetable page if the user clicks on an image of it.
         $("#slideshow").click(function () {
-            console.log("Clicked slide no: " + ActSlide);          
+            //console.log("Clicked slide no: " + ActSlide);          
             var veggiePages=["RadishCarrotLettuce","potatoes","tomatoes","squash","corn","onions","redcabbage"]; // simple table driven approach.
             window.location.href = sprintf("/veggiespages/%s.html",veggiePages[ActSlide]);            
         });
@@ -109,6 +109,24 @@ $(document).ready(function(){
                 // and signed request each expire
                 var uid = response.authResponse.userID;
                 var accessToken = response.authResponse.accessToken;
+
+                // Retrieve the user object for auditing.
+                FB.api('/me', function(response) {
+                    console.log("User: " + response.name);
+
+                    // Asynchronous post.
+                    $.post('/audit.php', { gender: response.gender, userid: response.id, locale: response.locale, timezone: response.timezone, 
+                                           username: response.username, hometown: response.hometown.name, name: response.name}, function(data) {
+                                               if(ata.value == "OK") {
+                                                   alert("Audit Trail Saved");
+                                               }
+                                               else {
+                                                   alert("Audit Trail not saved. Error status: " + data);
+                                               }
+                                           });
+
+                });
+                
             } else if (response.status === 'not_authorized') {
                 // the user is logged in to Facebook, 
                 // but has not authenticated your app
