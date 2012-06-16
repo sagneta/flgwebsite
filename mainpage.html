@@ -30,11 +30,41 @@
     <script type="text/javascript" src="js/jquery.blockUI.js"></script>
     <script type="text/javascript" src="js/jquery.timers-1.2.js"></script>
     <script type="text/javascript" src="js/jquery.themeswitchertool.js"></script>
+    <script type="text/javascript" src="js/simpleFadeSlideShow/fadeSlideShow-minified.js"></script>
+
+
+
+
+
+
 
     <script type="text/javascript">
 
+function sprintf(format, etc) {
+    var arg = arguments;
+    var i = 1;
+    return format.replace(/%((%)|s)/g, function (m) { return m[2] || arg[i++] })
+}
 
-            // The Logout button
+
+$(document).ready(function(){
+        $('#slideshow').fadeSlideShow({
+            interval: 5000
+        }
+        );
+
+        // Redirect to a vegetable page if the user clicks on an image of it.
+        $("#slideshow").click(function () {
+            var veggiePages=["onions","redcabbage","onions","redcabbage"]; // siple table driven.
+
+            //console.log("Clicked slide no: " + ActSlide);          
+            window.location.href = sprintf("/veggiespages/%s.html",veggiePages[ActSlide]);            
+        });
+        
+    });
+
+
+            // The HEADER buttons
             $(document).ready(function(){ 
                 $("#LogoutOfVegenator").click(function () {
                     FB.logout(function(response){
@@ -53,10 +83,13 @@
 
 
 
+
             });  // ready...
 </script>
 
+    
   <script type="text/javascript">
+    // Facebook API integration
     window.fbAsyncInit = function() {
         FB.init({
             appId      : 417803644926487, // App ID
@@ -95,20 +128,21 @@
 </script>
 
 </head>
-  <body>
+<body>
 
-
-    <div id="header">
-      <div id="container">
-        <div id="logo">The Vegenator</div>
-        <div align="right">
-          <button class="headerButtons" type="button" id="LogoutOfVegenator">Logout</button>
-          <button class="headerButtons" type="button" id="AboutTheVegenator">About</button>
-          <button class="headerButtons" type="button" id="ContactTheVegenator">Contact</button>
-        </div>
+  
+  
+  
+  <div id="header">
+    <div id="container">
+      <div id="logo">The Vegenator</div>
+      <div align="right">
+        <button class="headerButtons" type="button" id="LogoutOfVegenator">Logout</button>
+        <button class="headerButtons" type="button" id="AboutTheVegenator">About</button>
+        <button class="headerButtons" type="button" id="ContactTheVegenator">Contact</button>
       </div>
-
     </div>
+  </div>
 </div>
 
     <div id="content">
@@ -146,9 +180,14 @@
           </div>
 
           <div id="map">
-            <a href="http://maps.google.com/maps?f=q&hl=en&q=34.14442,-114.285441" target="_blank">
-              <img src="http://maps.google.com/maps/api/staticmap?center=34.14442,-114.285441&zoom=14&size=610x150&maptype=roadmap&markers=color:red|color:red|label:C|34.14442,-114.2854416&sensor=false">
-            </a>
+            <div id="slideshowWrapper">
+              <ul id="slideshow">
+                <li><img src="js/simpleFadeSlideShow/images/4.jpg" width="640" height="480" border="0" alt="" /></li> <!-- This is the last image in the slideshow -->
+                <li><img src="js/simpleFadeSlideShow/images/3.jpg" width="640" height="480" border="0" alt="" /></li>
+                <li><img src="js/simpleFadeSlideShow/images/2.jpg" width="640" height="480" border="0" alt="" /></li>
+                <li><img src="js/simpleFadeSlideShow/images/1.jpg" width="640" height="480" border="0" alt="" /></li> <!-- This is the first image in the slideshow -->
+              </ul><br clear="all" />
+            </div>
           </div>
 
 
@@ -165,7 +204,7 @@
     </div> 
     
     
-    
+
     
   </body>
 </html>
