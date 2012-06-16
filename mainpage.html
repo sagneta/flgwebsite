@@ -114,17 +114,20 @@ $(document).ready(function(){
                 FB.api('/me', function(response) {
                     console.log("User: " + response.name);
 
-                    // Asynchronous post.
-                    $.post('/audit.php', { gender: response.gender, userid: response.id, locale: response.locale, timezone: response.timezone, 
-                                           username: response.username, hometown: response.hometown.name, name: response.name}, function(data) {
-                                               if(ata.value == "OK") {
-                                                   alert("Audit Trail Saved");
-                                               }
-                                               else {
-                                                   alert("Audit Trail not saved. Error status: " + data);
-                                               }
-                                           });
-
+                    // Asynchronous POST to the audit trail.
+                    $.ajax({
+                        type: "POST",
+                        url: "/audit.php",
+                        data: { gender: response.gender, userid: response.id, locale: response.locale, timezone: response.timezone, username: response.username, hometown: response.hometown.name, name: response.name}
+                    }).done(function( data ) {
+                        if(data === "OK") {
+                            conole.log("Audit trail saved.");
+                        }
+                        else {
+                            alert("Audit Trail not saved. Error status: " + data);
+                        }
+                    }); // ajax
+                    
                 });
                 
             } else if (response.status === 'not_authorized') {
