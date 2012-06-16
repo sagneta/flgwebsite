@@ -169,5 +169,6 @@ body {
 /* For comments box to hide like button */
 div.like, div.like div {display:none;}
 
+/* My css additions/changes below this point */
+.headerButtons  {background-color: #3b5999; color:#FFFFFF; font-size: 11px; font-family: Arial; border:0; !important;}
 
-.headerButtons  {background-color: #3b5999; color:#FFFFFF; !important;}
