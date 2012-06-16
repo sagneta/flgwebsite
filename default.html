@@ -2,11 +2,11 @@
 <html>
   <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>Main Page for Stephen Agneta Final Project CS601</title>
+        <title>Default/Authentication Page for Stephen Agneta Final Project CS601</title>
 
         <link rel="shortcut icon" href="css/images/hot_chili.ico" type="image/x-icon" />
         <link rel="icon" href="css/images/hot_chili.ico" type="image/x-icon" />
-        <link rel="stylesheet" type="text/css" media="screen" href="css/ui.jqgrid.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="./css/ui.jqgrid.css" />
 
 
         <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
@@ -25,8 +25,6 @@
 
           $(document).ready(functon(){ 
           // It starts here.
-
-
           $("#SplashScreenImage").click(function () {
           alert("Clicked");
           });
@@ -51,38 +49,51 @@
 <div id="fb-root"></div>
 <div align="center">
   <script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : 417803644926487, // App ID
-      status     : true, // check login status
-      cookie     : true, // enable cookies to allow the server to access the session
-      xfbml      : true  // parse XFBML
-    });
+    window.fbAsyncInit = function() {
+        FB.init({
+            appId      : 417803644926487, // App ID
+            status     : true, // check login status
+            cookie     : true, // enable cookies to allow the server to access the session
+            xfbml      : true  // parse XFBML
+        });
 
-    // Additional initialization code here
-  };
+        //Additional initialization code here
 
-  // Load the SDK Asynchronously
+        // We authenticated, now redirect.
+        FB.Event.subscribe('auth.login', function(response) {
+            window.location.href = "/mainpage.html";
+        });
+ 
+        // Check if we are already authenticated and then redirect.
+        FB.getLoginStatus(function(response) {
+            if (response.status === 'connected') {
+                // the user is logged in and has authenticated your
+                // app, and response.authResponse supplies
+                // the user's ID, a valid access token, a signed
+                // request, and the time the access token 
+                // and signed request each expire
+                var uid = response.authResponse.userID;
+                var accessToken = response.authResponse.accessToken;
+                window.location.href = "/mainpage.html";
+            } 
+        });
+    };
+
+  // Load the SDK Asynchronously directly from facebook. I'm not keeping it local like the php Facebook API.
   (function(d){
-     var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement('script'); js.id = id; js.async = true;
-     js.src = "//connect.facebook.net/en_US/all.js";
-     ref.parentNode.insertBefore(js, ref);
-   }(document));
-
-
-
+           var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
+           js = d.createElement('script'); js.id = id; js.async = true;
+           js.src = "//connect.facebook.net/en_US/all.js";
+           d.getElementsByTagName('head')[0].appendChild(js);
+         }(document));
 </script>
   
   
   
 </div>
-<div class="fb-login-button">
-  <div align="center">Login with Facebook</div>
-</div>
+<div align="center" class="fb-login-button">Login with Facebook</div>
     <div align="center"><br>
-        <img  id="SplashScreenImage" class="splashscreen" src="./css/images/garden/RedCabbage.jpg" />
+        <img  id="SplashScreenImage" class="splashscreen" src="./css/images/garden/RedCabbage_Small.jpg" />
     </div>
   <h1 class="splashheader1">Stephen James Agneta</h1>
     <h2 class="splashheader2">The Vegenator</h2>
