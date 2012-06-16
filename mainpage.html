@@ -3,8 +3,8 @@
 <!-- Using the facebook (fb) name space -->
 <html xmlns:fb="http://www.facebook.com/2008/fbml">
   <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>Main Page for Stephen Agneta Final Project CS601</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Main Page for Stephen Agneta Final Project CS601</title>
 
     <!-- Facebook namespace meta properites ->
     <meta property="og:title" content="The Vegenator"/>
@@ -14,6 +14,7 @@
     <meta property="og:site_name" content="The Vegenator"/>
     <meta property="fb:app_id" content="417803644926487"> 
     <meta property="og:description" content="Gardening on my front lawn."/>
+
 
     <!-- My Customary JQuery Stuff. Don''t leave home without it. -->
     <link rel="shortcut icon" href="css/images/hot_chili.ico" type="image/x-icon" />
@@ -31,7 +32,7 @@
     <script type="text/javascript" src="js/jquery.themeswitchertool.js"></script>
 
 
-  <script>
+  <script type="text/javascript">
     window.fbAsyncInit = function() {
         FB.init({
             appId      : 417803644926487, // App ID
@@ -73,54 +74,60 @@
   <body>
 
 
-  <div id="header">
-    <div id="container">
-      <div id="logo">winefriends</div>
-    </div>
-  </div>
-  <div id="content">
-    <div id="container">
-      <div id="left-sidebar">
-        <div id="logo">
-          <img src="http://sphotos.ak.fbcdn.net/hphotos-ak-ash2/hs388.ash2/66693_10100104127284988_10719934_52998790_8155254_n.jpg" width="270" height="200">
-        </div>
-        <h2>Activity feed</h2>
-        <div class="facebook-plugin">
-          <fb:activity site="winowoman.com" header="false" width="260" height="325" font="arial" border_color="#fff"></fb:activity>
-        </div>
-
-        <h2>Recommendations</h2>
-        <div class="facebook-plugin">
-          <fb:recommendations site="corkd.com" header="false" width="260" height="350" font="arial" border_color="#fff"></fb:recommendations>
-        </div>
-      </div>
-      <div id="right-sidebar">
-        <h1>Story Bar</h1>
-        <div class="facebook-plugin">
-          <fb:like></fb:like>
-        </div>
-        <h2>Map</h2>
-        <div id="address">
-          <a href="http://maps.google.com/maps?f=q&hl=en&q=34.14442,-114.285441" target="_blank">1601 S. California Ave. Palo Alto, CA</a>
-        </div>
-        <div id="map">
-          <a href="http://maps.google.com/maps?f=q&hl=en&q=34.14442,-114.285441" target="_blank">
-            <img src="http://maps.google.com/maps/api/staticmap?center=34.14442,-114.285441&zoom=14&size=610x150&maptype=roadmap&markers=color:red|color:red|label:C|34.14442,-114.2854416&sensor=false">
-          </a>
-        </div>
-        <h2>Comments</h2>
-<fb:comments url="http://www.hsiet.com/winery/storybar.html" width="610px" height="700px" simple="1" css="http://www.hsiet.com/winery/style.css"></fb:comments>
+    <div id="header">
+      <div id="container">
+        <div id="logo">The Vegenator</div>
       </div>
     </div>
-  </div> 
-<div id="footer">
-  <div id="container">
-    A hackathon production.
-  </div>
-</div> 
+
+    <div id="content">
 
 
+      <div id="container">
+        <div id="left-sidebar">
+          <div id="logo">
+            <img src="./css/images/garden/FrontYardGardenViewFromStreet_Medium.jpg" width="270" height="200">
+          </div>
+          
+          <h2>Activity feed</h2>
+          <div class="facebook-plugin">
+            <fb:activity app_id="417803644926487" site="thevegenator.com" header="false" width="260" height="325" font="arial" border_color="#fff"></fb:activity>
+          </div>
+          
+          <h2>Recommendations</h2>
+          <div class="facebook-plugin">
+            <fb:recommendations app_id="417803644926487" site="thevegenator.com" header="false" width="260" height="350" font="arial" border_color="#fff"></fb:recommendations>
+          </div>
+        </div>
+        
 
-
+        <div id="right-sidebar">
+          <h1>The Veggie Bar</h1>
+          <div class="facebook-plugin">
+            <fb:like></fb:like>
+          </div>
+          <h2>Various and Sundry Vegetables</h2>
+          <div id="address">
+            <a href="http://maps.google.com/maps?f=q&hl=en&q=34.14442,-114.285441" target="_blank">1601 S. California Ave. Palo Alto, CA</a>
+          </div>
+          <div id="map">
+            <a href="http://maps.google.com/maps?f=q&hl=en&q=34.14442,-114.285441" target="_blank">
+              <img src="http://maps.google.com/maps/api/staticmap?center=34.14442,-114.285441&zoom=14&size=610x150&maptype=roadmap&markers=color:red|color:red|label:C|34.14442,-114.2854416&sensor=false">
+            </a>
+          </div>
+          <h2>Comments</h2>
+          <fb:comments href="http://thevegenator.com/mainpage.html" url="http://thevegenator.com/mainpage.html" width="610px" height="700px" num_posts="50"</fb:comments>
+        </div>
+      </div>
+    </div> 
+    <div id="footer">
+      <div id="container">
+        Final Project CS601
+      </div>
+    </div> 
+    
+    
+    
+    
   </body>
 </html>
