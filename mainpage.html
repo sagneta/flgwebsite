@@ -49,15 +49,16 @@ function sprintf(format, etc) {
 
 $(document).ready(function(){
         $('#slideshow').fadeSlideShow({
-            interval: 5000
+            interval: 10000,
+            width: 320,
+            height: 240
         }
         );
 
         // Redirect to a vegetable page if the user clicks on an image of it.
         $("#slideshow").click(function () {
-            var veggiePages=["onions","redcabbage","onions","redcabbage"]; // siple table driven.
-
-            //console.log("Clicked slide no: " + ActSlide);          
+            console.log("Clicked slide no: " + ActSlide);          
+            var veggiePages=["RadishCarrotLettuce","potatoes","tomatoes","squash","corn","onions","redcabbage"]; // simple table driven approach.
             window.location.href = sprintf("/veggiespages/%s.html",veggiePages[ActSlide]);            
         });
         
@@ -73,7 +74,8 @@ $(document).ready(function(){
                 });
 
                 $("#AboutTheVegenator").click(function () {
-                    alert("About the Vegentator");
+                    window.location.href = "/About.html";
+                    
                 });
 
                 $("#ContactTheVegenator").click(function () {
@@ -162,7 +164,6 @@ $(document).ready(function(){
           <h2>Recommendations</h2>
           <div class="facebook-plugin">
             <fb:recommendations app_id="417803644926487" site="thevegenator.com" header="false" width="260" height="350" font="arial" border_color="#fff">
-              <fb:facepile></fb:facepile>
             </fb:recommendations>
           </div>
         </div>
@@ -172,6 +173,7 @@ $(document).ready(function(){
           <h1>The Veggie Bar</h1>
           <div class="facebook-plugin">
             <fb:like></fb:like>
+            <fb:facepile></fb:facepile>
           </div>
           <h2>Various and Sundry Vegetables</h2>
 
@@ -182,11 +184,15 @@ $(document).ready(function(){
           <div id="map">
             <div id="slideshowWrapper">
               <ul id="slideshow">
-                <li><img src="js/simpleFadeSlideShow/images/4.jpg" width="640" height="480" border="0" alt="" /></li> <!-- This is the last image in the slideshow -->
-                <li><img src="js/simpleFadeSlideShow/images/3.jpg" width="640" height="480" border="0" alt="" /></li>
-                <li><img src="js/simpleFadeSlideShow/images/2.jpg" width="640" height="480" border="0" alt="" /></li>
-                <li><img src="js/simpleFadeSlideShow/images/1.jpg" width="640" height="480" border="0" alt="" /></li> <!-- This is the first image in the slideshow -->
+                <li><img src="css/images/garden/Radishes_Carrots_And_Lettuce.jpg" width="320" height="240" border="0" alt="" /></li> <!-- This is the last image in the slideshow -->
+                <li><img src="css/images/garden/Potatoes.jpg" width="320" height="240" border="0" alt="" /></li>
+                <li><img src="css/images/garden/Tomatos.jpg" width="320" height="240" border="0" alt="" /></li>
+                <li><img src="css/images/garden/VariousSquash.jpg" width="320" height="240" border="0" alt="" /></li>
+                <li><img src="css/images/garden/CornAndButterNutSquash_TheTwoSisters.jpg" width="320" height="240" border="0" alt="" /></li>
+                <li><img src="css/images/garden/Gardlic_Onions_Strawberries.jpg" width="320" height="240" border="0" alt="" /></li>
+                <li><img src="css/images/garden/RedCabbage.jpg" width="320" height="240" border="0" alt="" /></li> <!-- This is the first image in the slideshow -->
               </ul><br clear="all" />
+              <span class="informationalText" >Select an image above for more information</spand>
             </div>
           </div>
 
@@ -198,9 +204,7 @@ $(document).ready(function(){
       </div>
     </div> 
     <div id="footer">
-      <div id="container">
-        Final Project CS601
-      </div>
+      <div id="container">Final Project CS601</div>
     </div> 
     
     
