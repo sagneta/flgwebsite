@@ -168,3 +168,6 @@ body {
 
 /* For comments box to hide like button */
 div.like, div.like div {display:none;}
+
+
+.headerButtons  {background-color: #3b5999; color:#FFFFFF; !important;}
