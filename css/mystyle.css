@@ -110,11 +110,16 @@ body {
   color: #343434;
 }  
 
+
+
+
 #right-sidebar {
   float: left;
   width: 610px;
   padding-top: 25px;
 }
+
+
 
 #right-sidebar h1 {
   font-size: 1.4em;
@@ -151,11 +156,14 @@ body {
   float: left;
 }
 
+
 #right-sidebar .facebook-plugin {
   margin: 5px 0px 20px 0px;
   float: left;
   clear: both;
 }
+
+
 
 #footer {
   float: left;
@@ -181,7 +189,7 @@ div.like, div.like div {display:none;}
 #fssPlayPause{position:absolute;top:435px;right:20px;background:url(white.png) repeat;padding:4px 0 5px 0;-moz-border-radius:5px;border-radius:5px;width:60px;text-align:center;display:block;color:#333;text-decoration:none;}
 
 ul#slideshow{list-style:none;border:1px solid #999;padding:2px;margin:auto;margin-top:5%;width:640px;height:480px;overflow:hidden;}
-p{text-align:center;}
+/*p{text-align:center;}*/
 #fssList{list-style:none;width:646px;margin:auto;padding:5px 0 0 45%;}
 #fssList li{display:inline;padding-right:10px;}
 #fssList li a{color:#999;text-decoration:none;}
@@ -192,3 +200,26 @@ p{text-align:center;}
 #top h1 span{font-size:11px;}
 #top h1 a{text-decoration:underline;color:#fff;}
 #top h1 a:hover{text-decoration:none;}
+
+
+#about-text  {
+  float: left;
+  width: 610px;
+  padding-top: 25px;
+}
+
+#about-text  {
+  float: left;
+  width: 610px;
+  padding-top: 25px;
+}
+
+
+#about-quote  {
+  float: left;
+  width: 610px;
+  padding-top: 25px;
+
+}
+
+p.h2 { quotes: '»' '«'; color:#00FF00; !important   }
