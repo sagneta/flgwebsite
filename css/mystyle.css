@@ -119,6 +119,12 @@ body {
   padding-top: 25px;
 }
 
+#about-text  {
+  float: left;
+  width: 610px;
+  padding-top: 25px;
+
+}
 
 
 #right-sidebar h1 {
@@ -184,8 +190,8 @@ div.like, div.like div {display:none;}
 
 /* slideshowWrapper free JQuery plugin */
 #slideshowWrapper{position:relative;width:646px;margin:auto;}
-#fssPrev{position:absolute;top:169px;left:-67px;background:url(arrows.png) -67px 0px;width:67px;height:143px;text-indent:-999999px;}
-#fssNext{position:absolute;top:169px;left:646px;background:url(arrows.png) no-repeat;width:67px;height:143px;text-indent:-999999px;}
+#fssPrev{position:absolute;top:60px;left:90px;background:url(arrows.png) -67px 0px;width:67px;height:143px;text-indent:-999999px;}
+#fssNext{position:absolute;top:60px;left:490px;background:url(arrows.png) no-repeat;width:67px;height:143px;text-indent:-999999px;}
 #fssPlayPause{position:absolute;top:435px;right:20px;background:url(white.png) repeat;padding:4px 0 5px 0;-moz-border-radius:5px;border-radius:5px;width:60px;text-align:center;display:block;color:#333;text-decoration:none;}
 
 ul#slideshow{list-style:none;border:1px solid #999;padding:2px;margin:auto;margin-top:5%;width:640px;height:480px;overflow:hidden;}
@@ -202,24 +208,3 @@ ul#slideshow{list-style:none;border:1px solid #999;padding:2px;margin:auto;margi
 #top h1 a:hover{text-decoration:none;}
 
 
-#about-text  {
-  float: left;
-  width: 610px;
-  padding-top: 25px;
-}
-
-#about-text  {
-  float: left;
-  width: 610px;
-  padding-top: 25px;
-}
-
-
-#about-quote  {
-  float: left;
-  width: 610px;
-  padding-top: 25px;
-
-}
-
-p.h2 { quotes: '»' '«'; color:#00FF00; !important   }
