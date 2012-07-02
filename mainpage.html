@@ -24,12 +24,6 @@
     <link type="text/css" rel="stylesheet" href="./css/mystyle.css">    
     <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="js/jquery-ui-1.8.17.custom.min.js"></script>
-    <script type="text/javascript" src="js/jquery.format.1.05.js"></script>
-    <script type="text/javascript" src="js/i18n/grid.locale-en.js"></script>
-    <script type="text/javascript" src="js/jquery.jqGrid.min.js"></script>
-    <script type="text/javascript" src="js/jquery.blockUI.js"></script>
-    <script type="text/javascript" src="js/jquery.timers-1.2.js"></script>
-    <script type="text/javascript" src="js/jquery.themeswitchertool.js"></script>
     <script type="text/javascript" src="js/simpleFadeSlideShow/fadeSlideShow-minified.js"></script>
 
 
@@ -59,7 +53,10 @@ $(document).ready(function(){
         $("#slideshow").click(function () {
             //console.log("Clicked slide no: " + ActSlide);          
             var veggiePages=["RadishCarrotLettuce","potatoes","tomatoes","squash","corn","onions","redcabbage"]; // simple table driven approach.
-            window.location.href = sprintf("/veggiespages/%s.html",veggiePages[ActSlide]);            
+            //window.location.href = sprintf("/veggiespages/%s.html",veggiePages[ActSlide]); 
+
+            //open in new window
+            window.open(sprintf("/veggiespages/%s.html",veggiePages[ActSlide]),'_blank');           
         });
         
     });
@@ -77,6 +74,12 @@ $(document).ready(function(){
                     window.location.href = "/About.html";
                     
                 });
+
+                $("#FortressOfSolitude").click(function () {
+                    window.location.href = "/information/fos.html";
+                    
+                });
+
 
                 $("#ContactTheVegenator").click(function () {
                     document.location.href = "mailto:sagneta@gmail.com?subject=Your site is so wonderful blah blah blah";
@@ -160,6 +163,7 @@ $(document).ready(function(){
     <div id="container">
       <div id="logo">The Vegenator</div>
       <div align="right">
+        <button class="headerButtons" type="button" id="FortressOfSolitude">Fortress of Solitude</button>
         <button class="headerButtons" type="button" id="AboutTheVegenator">About</button>
         <button class="headerButtons" type="button" id="ContactTheVegenator">Contact</button>
         <button class="headerButtons" type="button" id="LogoutOfVegenator">Logout</button>
