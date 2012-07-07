@@ -25,7 +25,7 @@
     <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="js/jquery-ui-1.8.17.custom.min.js"></script>
     <script type="text/javascript" src="js/simpleFadeSlideShow/fadeSlideShow-minified.js"></script>
-
+    <script type="text/javascript" src="js/myjs.js"></script>
 
 
 
@@ -34,11 +34,6 @@
 
     <script type="text/javascript">
 
-function sprintf(format, etc) {
-    var arg = arguments;
-    var i = 1;
-    return format.replace(/%((%)|s)/g, function (m) { return m[2] || arg[i++] })
-}
 
 
 $(document).ready(function(){
@@ -53,10 +48,9 @@ $(document).ready(function(){
         $("#slideshow").click(function () {
             //console.log("Clicked slide no: " + ActSlide);          
             var veggiePages=["RadishCarrotLettuce","potatoes","tomatoes","squash","corn","onions","redcabbage"]; // simple table driven approach.
-            //window.location.href = sprintf("/veggiespages/%s.html",veggiePages[ActSlide]); 
 
             //open in new window
-            window.open(sprintf("/veggiespages/%s.html",veggiePages[ActSlide]),'_blank');           
+            window.open($().vegSprintf("/veggiespages/%s.html",veggiePages[ActSlide]),'_blank');           
         });
         
     });

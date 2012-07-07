@@ -1,16 +1,67 @@
-<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<!DOCTYPE  PUBLIC >
 <html>
 <head>
-<title>The Corn Page Placeholder</title>
+<meta content="text/html; charset=utf-8" http-equiv="content-type"/>
+<title>About the Vegenator</title>
+
+<link rel="shortcut icon" href="../css/images/hot_chili.ico" type="image/x-icon" />
+<link rel="icon" href="../css/images/hot_chili.ico" type="image/x-icon" />
+<link type="text/css" href="../css/smoothness/jquery-ui-1.8.17.custom.css" rel="stylesheet" />   
+<script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
+<link type="text/css" rel="stylesheet" href="../css/mystyle.css">    
+
+    <script type="text/javascript">
+
+            // The HEADER buttons
+            $(document).ready(function(){ 
+                $("#Home").click(function () {
+                        window.location.href = "/mainpage.html";             
+                });
+            });  // ready...
+
+</script>
+
+
 </head>
 <body>
-<h1></h1>
-<hr>
 
-<hr>
-<address>
-Page Maintainer:  <a href="mailto:sagneta@advent.com">Stephen Agneta</a><BR>
-ID: $Id: html-insert.html,v 1.4 2000/06/29 20:42:21 dewey Exp $
-</address>
+  <div id="header">
+    <div id="container">
+      <div id="logo">The Vegenator</div>
+      <div align="right">
+        <button class="headerButtons" type="button" id="Home">Home</button>
+       </div>
+    </div>
+  </div>
+  
+  <div id="container">
+    <div id="left-sidebar">
+      <div id="logo">
+        <img src="../css/images/budman_peace_small.gif"/>
+      </div>
+    </div>
+  </div>
+
+   
+  <p id="about-text">
+    Potatoes are actually quite fun. The kids love them as you can use them to make potatoe chips and they enjoy digging them up. Red varieties work well in my garden in Shrewsbury as do Yukons. There are more varieties of potatoes then you think. Bright blue, yellow, red, orange and even purple. Kids love the variety.
+</br>
+</br>
+You can grow potatoes in a plot which will produce an abundance which is why the potatoe was such a gift to peasent farmers in Europe when it arrived from the new world. It prefers acidic soil, loves compost (which is itself acidic usually) and prefers to hug Red Cabbage, onions, Strawberries and garlic. 
+</br>
+</br>
+I plant potatoes earlier than most folks. April 1 which almost guarantees some frosts will occur but most of the potatoes experience no difficulty. If there is frost damange the leaves turn black. Simply cut those parts out of the plant and it will survive and still thrive. I like getting a headstart on the season with potatoes.
+</br>
+</br>
+One trick for preventing chipmunks (the Vegenator's mortal enemy) from digging them up is to bury a chickenwire mesh ontop of the potatoes. It will not prevent the potatoes from thriving but does prevent the little critters from digging to far down into the patch.
+   </p>
+  
+  
+
+
+
+
+
+
 </body>
 </html>
