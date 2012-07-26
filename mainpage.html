@@ -76,6 +76,11 @@ $(document).ready(function(){
                 });
 
 
+                $("#GuestLog").click(function () {
+                    window.open("/information/auditpage.php",'_blank');
+                });
+
+
                 $("#ContactTheVegenator").click(function () {
                     document.location.href = "mailto:sagneta@gmail.com?subject=Your site is so wonderful blah blah blah";
                 });
@@ -161,6 +166,7 @@ $(document).ready(function(){
         <button class="headerButtons" type="button" id="FortressOfSolitude">Fortress of Solitude</button>
         <button class="headerButtons" type="button" id="AboutTheVegenator">About</button>
         <button class="headerButtons" type="button" id="ContactTheVegenator">Contact</button>
+        <button class="headerButtons" type="button" id="GuestLog">Guest Log</button>
         <button class="headerButtons" type="button" id="LogoutOfVegenator">Logout</button>
       </div>
     </div>
