@@ -15,6 +15,8 @@
 
             $(document).ready(function(){ 
                 $().vegInitialize();
+
+                $().vegIsAuthenticated();
             });  // ready...
 
 </script>

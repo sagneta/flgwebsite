@@ -9,15 +9,16 @@
 <link type="text/css" href="../css/smoothness/jquery-ui-1.8.17.custom.css" rel="stylesheet" />   
 <script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
 <link type="text/css" rel="stylesheet" href="../css/mystyle.css">    
+<script type="text/javascript" src="../js/myjs.js"></script>
 
     <script type="text/javascript">
 
-            // The HEADER buttons
             $(document).ready(function(){ 
-                $("#Home").click(function () {
-                        window.location.href = "/mainpage.html";             
-                });
+                $().vegInitialize();
+
+                $().vegIsAuthenticated();
             });  // ready...
+
 
 </script>
 
